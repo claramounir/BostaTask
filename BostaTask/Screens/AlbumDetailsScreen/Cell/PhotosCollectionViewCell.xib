@@ -17,24 +17,22 @@
                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" id="5Yh-SK-6uG">
-                        <rect key="frame" x="-172" y="-401" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Yh-SK-6uG">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RS0-9A-C6D">
-                                <rect key="frame" x="5" y="5" width="383" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="98t-si-jaf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="RS0-9A-C6D" firstAttribute="leading" secondItem="5Yh-SK-6uG" secondAttribute="leading" constant="5" id="YXD-3c-5gr"/>
-                            <constraint firstAttribute="bottom" secondItem="RS0-9A-C6D" secondAttribute="bottom" constant="5" id="i47-j1-NBX"/>
-                            <constraint firstAttribute="trailing" secondItem="RS0-9A-C6D" secondAttribute="trailing" constant="5" id="m8O-JV-WcE"/>
-                            <constraint firstItem="RS0-9A-C6D" firstAttribute="top" secondItem="5Yh-SK-6uG" secondAttribute="top" constant="5" id="zWx-mw-o8i"/>
+                            <constraint firstItem="RS0-9A-C6D" firstAttribute="leading" secondItem="5Yh-SK-6uG" secondAttribute="leading" id="YXD-3c-5gr"/>
+                            <constraint firstAttribute="bottom" secondItem="RS0-9A-C6D" secondAttribute="bottom" id="i47-j1-NBX"/>
+                            <constraint firstAttribute="trailing" secondItem="RS0-9A-C6D" secondAttribute="trailing" id="m8O-JV-WcE"/>
+                            <constraint firstItem="RS0-9A-C6D" firstAttribute="top" secondItem="5Yh-SK-6uG" secondAttribute="top" id="zWx-mw-o8i"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
@@ -42,6 +40,13 @@
                     </view>
                 </subviews>
             </view>
+            <viewLayoutGuide key="safeArea" id="wZH-sO-pot"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="5Yh-SK-6uG" secondAttribute="trailing" id="bch-KF-Gsh"/>
+                <constraint firstItem="5Yh-SK-6uG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="lYd-Gq-H1b"/>
+                <constraint firstAttribute="bottom" secondItem="5Yh-SK-6uG" secondAttribute="bottom" id="uRf-YG-6RS"/>
+                <constraint firstItem="5Yh-SK-6uG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="usN-dG-LXd"/>
+            </constraints>
             <connections>
                 <outlet property="albumPhoto" destination="RS0-9A-C6D" id="wnk-oj-V1J"/>
             </connections>
