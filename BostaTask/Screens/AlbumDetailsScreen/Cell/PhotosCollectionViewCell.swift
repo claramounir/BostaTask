@@ -8,9 +8,12 @@
 import UIKit
 
 class PhotosCollectionViewCell: UICollectionViewCell {
-
-    @IBOutlet weak var albumPhoto: UIImageView!
+    // MARK: - Static Properties
+    
     static let identifier = String(describing: PhotosCollectionViewCell.self)
+    // MARK: - Outlets
+    @IBOutlet weak var albumPhoto: UIImageView!
+    // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

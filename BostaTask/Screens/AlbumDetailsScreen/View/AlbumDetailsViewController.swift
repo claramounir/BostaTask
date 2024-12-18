@@ -12,7 +12,7 @@ import CombineCocoa
 class AlbumDetailsViewController: UIViewController {
     // MARK: - Outlets
 
-    @IBOutlet weak var searchField: UITextField!
+    @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var photoCollectionView: UICollectionView!
     @IBOutlet weak var albumNameLabel: UILabel!
     // MARK: - Properties
@@ -94,11 +94,11 @@ extension AlbumDetailsViewController{
 }
 extension AlbumDetailsViewController: UITextFieldDelegate {
     private func setupTextField() {
-        searchField.delegate = self
+        searchTextField.delegate = self
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        guard let searchText = searchField.text else { return }
+        guard let searchText = searchTextField.text else { return }
         viewModel.searchWithTitle(searchText)
     }
     

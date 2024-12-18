@@ -14,8 +14,8 @@
             filePath = "Screens/ProfileScreen/View/ProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "albumsSubscribe()"
             landmarkType = "7">
          </BreakpointContent>
@@ -32,8 +32,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
             endingLineNumber = "43"
-            landmarkName = "albums"
-            landmarkType = "24">
+            landmarkName = "fetchAlbums(for:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -48,8 +48,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
             endingLineNumber = "51"
-            landmarkName = "albums"
-            landmarkType = "24">
+            landmarkName = "fetchAlbums(for:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -78,8 +78,8 @@
             filePath = "Screens/AlbumDetailsScreen/ViewMoodel/AlbumDetailsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "searchWithTitle(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "Screens/AlbumDetailsScreen/ViewMoodel/AlbumDetailsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "fetchPhotos(for:)"
             landmarkType = "7">
          </BreakpointContent>

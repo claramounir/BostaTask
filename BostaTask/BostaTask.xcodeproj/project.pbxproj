@@ -27,6 +27,7 @@
 		B888D9AB2D11D64700564F58 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888D9AA2D11D64700564F58 /* CardView.swift */; };
 		B8954BB52D1203EB004123F5 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8954BB32D1203EB004123F5 /* ImageViewController.swift */; };
 		B8954BB62D1203EB004123F5 /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8954BB42D1203EB004123F5 /* ImageViewController.xib */; };
+		B89DB14A2D130E3E007A59E6 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89DB1492D130E3E007A59E6 /* Constant.swift */; };
 		B8FF56DC2D10CB2B003C68B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FF56DB2D10CB2B003C68B9 /* AppDelegate.swift */; };
 		B8FF56DE2D10CB2B003C68B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FF56DD2D10CB2B003C68B9 /* SceneDelegate.swift */; };
 		B8FF56E52D10CB2D003C68B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8FF56E42D10CB2D003C68B9 /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 		B888D9AA2D11D64700564F58 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B8954BB32D1203EB004123F5 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		B8954BB42D1203EB004123F5 /* ImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewController.xib; sourceTree = "<group>"; };
+		B89DB1492D130E3E007A59E6 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		B8FF56D82D10CB2B003C68B9 /* BostaTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BostaTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8FF56DB2D10CB2B003C68B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8FF56DD2D10CB2B003C68B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -220,9 +222,18 @@
 			path = CardView;
 			sourceTree = "<group>";
 		};
+		B89DB1482D130E08007A59E6 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B89DB1492D130E3E007A59E6 /* Constant.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		B8FF56CF2D10CB2B003C68B9 = {
 			isa = PBXGroup;
 			children = (
+				B89DB1482D130E08007A59E6 /* Constants */,
 				B888D9A92D11D62600564F58 /* CardView */,
 				B842C7D52D10EC7400F9807F /* Extensions */,
 				B8FF56EF2D10CB33003C68B9 /* Network */,
@@ -368,6 +379,7 @@
 				B888D99B2D11741B00564F58 /* ProfileViewController.swift in Sources */,
 				B888D9A42D11C49200564F58 /* String+Extension.swift in Sources */,
 				B852AD5C2D1245C800644726 /* PhotosCollectionViewCell.swift in Sources */,
+				B89DB14A2D130E3E007A59E6 /* Constant.swift in Sources */,
 				B8FF56DE2D10CB2B003C68B9 /* SceneDelegate.swift in Sources */,
 				B888D9972D116C2700564F58 /* ProfileViewModel.swift in Sources */,
 				B842C7C32D10DB2500F9807F /* DataSource.swift in Sources */,
