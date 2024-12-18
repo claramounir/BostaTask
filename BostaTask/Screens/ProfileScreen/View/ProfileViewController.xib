@@ -11,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="BostaTask" customModuleProvider="target">
             <connections>
                 <outlet property="adressLabel" destination="I77-Aj-n6B" id="MHp-2N-1Zp"/>
-                <outlet property="albumsTabelView" destination="4N4-cN-Tlz" id="NpV-Kx-Da8"/>
+                <outlet property="albumsTableView" destination="4N4-cN-Tlz" id="ftH-cD-Lyg"/>
                 <outlet property="nameLabel" destination="HYV-Wk-eVJ" id="XHM-Di-2Jh"/>
                 <outlet property="view" destination="iLm-NU-s90" id="Y7m-ab-7PO"/>
             </connections>

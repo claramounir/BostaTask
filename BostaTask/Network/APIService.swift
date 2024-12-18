@@ -17,7 +17,7 @@ enum APIService {
 
 extension APIService: TargetType {
     var baseURL: URL {
-        return URL(string: "https://jsonplaceholder.typicode.com")!
+        return URL(string: Constant.baseUrl)!
     }
 
     var path: String {

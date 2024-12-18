@@ -11,7 +11,7 @@ import CombineCocoa
 class ProfileViewController: UIViewController {
     // MARK: - Outlets
     
-    @IBOutlet private weak var albumsTabelView: UITableView!
+    @IBOutlet weak var albumsTableView: UITableView!
     @IBOutlet private weak var adressLabel: UILabel!
     @IBOutlet private weak var nameLabel: UILabel!
     // MARK: - Properties
@@ -34,14 +34,20 @@ class ProfileViewController: UIViewController {
 }
 //MARK: - EXTENSIONS
 extension ProfileViewController : UITableViewDelegate, UITableViewDataSource {
- 
+    
+    private func setupAlbumTableView() {
+        albumsTableView.delegate = self
+        albumsTableView.dataSource = self
+        albumsTableView.register(UINib(nibName: AlbumsTableViewCell.identifier, bundle: nil),
+        forCellReuseIdentifier: AlbumsTableViewCell.identifier)
+    }
     // MARK: - UITableViewDataSource
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.albums.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = albumsTabelView.dequeueReusableCell(withIdentifier: AlbumsTableViewCell.identifier, for: indexPath) as? AlbumsTableViewCell {
+        if let cell = albumsTableView.dequeueReusableCell(withIdentifier: AlbumsTableViewCell.identifier, for: indexPath) as? AlbumsTableViewCell {
             cell.configure(with: viewModel.albums[indexPath.row])
             return cell
         } else {
@@ -51,30 +57,21 @@ extension ProfileViewController : UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let album = viewModel.albums[indexPath.row]
-        let vc = AlbumDetailsViewController(
+        let albumDetailsViewController = AlbumDetailsViewController(
             albumId: album.id,
             albumTitle: album.title
         )
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.navigationController?.pushViewController(albumDetailsViewController, animated: true)
     }
-    private func setupAlbumTableView() {
-        albumsTabelView.delegate = self
-        albumsTabelView.dataSource = self
-        albumsTabelView.register(UINib(nibName: AlbumsTableViewCell.identifier, bundle: nil),
-        forCellReuseIdentifier: AlbumsTableViewCell.identifier)
-    }
-
 }
 // MARK: - Address Formatting & User Data Subscription
 extension ProfileViewController{
-    
     private func formatAddress(_ address: Address) -> String {
         let components = [address.street, address.suite, address.city, address.zipcode]
         return components
-            .compactMap { $0 } // Remove nil values
+            .compactMap { $0 }
             .joined(separator: ", ")
     }
-
     private func userDataSubscribe() {
         viewModel.$users
             .sink { [weak self] users in
@@ -96,12 +93,11 @@ extension ProfileViewController{
             .sink { [weak self] _ in
                 guard let self else { return }
                 print(viewModel.albums.count)
-                albumsTabelView.reloadData()
+                albumsTableView.reloadData()
             }
             .store(in: &cancellables)
     }
     // MARK: - Data Fetching
-
     private func getData() {
         viewModel.fetchUsers()
         

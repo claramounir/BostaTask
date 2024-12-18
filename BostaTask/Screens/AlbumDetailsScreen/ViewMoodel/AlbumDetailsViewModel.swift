@@ -16,7 +16,6 @@ final class AlbumDetailsViewModel {
     
 // Published properties to bind to the UI
     @Published var photos = [Photos]()
-    @Published var searchQuery: String = ""
     @Published var allPhotos: [Photos] = []
     @Published var isLoading: Bool = false
     @Published var errorMessage: String?
