@@ -26,6 +26,7 @@ class AlbumDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+       
     }
     // MARK: - Initializers
 
@@ -70,11 +71,22 @@ extension AlbumDetailsViewController : UICollectionViewDelegate, UICollectionVie
         let vc = ImageViewController(imageUrl: imageUrl)
         navigationController?.pushViewController(vc, animated: true)
     }
+
     private func setupPhotoCollectionView() {
         photoCollectionView.delegate = self
         photoCollectionView.dataSource = self
         photoCollectionView.register(UINib(nibName: PhotosCollectionViewCell.identifier, bundle: nil),
                 forCellWithReuseIdentifier: PhotosCollectionViewCell.identifier)
+        configureCollectionViewLayout()
+    }
+    private func configureCollectionViewLayout(){
+        let layout = UICollectionViewFlowLayout()
+        let itemWidth = UIScreen.main.bounds.width / 3
+        layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        photoCollectionView.setCollectionViewLayout(layout, animated: false)
     }
 }
 // MARK: - ViewModel Subscriptions
