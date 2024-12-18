@@ -23,8 +23,25 @@ class ImageViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+          setupScrollView()
+          loadImage(for: imageUrl)
+          addNavigationShareButton()
+    }
+    func loadImage(for linkString: String?, _ placeholder: UIImage? = UIImage(named: "placeholder.png")) {
+        let options: [KingfisherOptionsInfoItem] = [.cacheOriginalImage, .scaleFactor(0.5)]
+        
+        guard let linkString,
+                let url = URL(string: linkString) else { return }
+        
+        albumImage.kf.setImage(with: url, placeholder: placeholder, options: options) { [weak self] result in
+            guard let self else { return }
+            switch result {
+            case .success(let image):
+                self.albumImage.image = image.image
+            case .failure:
+                self.albumImage.image = placeholder
+            }
+        }
     }
     
     private func addNavigationShareButton() {
